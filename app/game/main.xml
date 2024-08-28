@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Tündér Kaland" icon="" />
+
+    <StackLayout backgroundColor="#3c495e">
+    <Label
+        text="helló...2123"
+        horizontalAlignment="left"
+        width="33%"
+        height="70"
+        backgroundColor="#43B3F4"
+    />
+    <Label
+        text="bello..."
+        horizontalAlignment="center"
+        width="33%"
+        height="70"
+        backgroundColor="#1089CA"
+    />
+    <Label
+        text="yellow"
+        horizontalAlignment="right"
+        width="33%"
+        height="70"
+        backgroundColor="#075B88"
+    />
+    <Label
+        text="..."
+        horizontalAlignment="stretch"
+        height="70"
+        backgroundColor="#43B3F4"
+    />
+    </StackLayout>
+</Page>
