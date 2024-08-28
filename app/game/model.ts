@@ -5,6 +5,11 @@ export class Game extends Observable {
     private title: string;
     private quests: Quest[];
 
+    constructor(config: JSON) {
+        super();
+
+        this.title = config['title'];
+    }
 
     /*
     private _counter: number;
