@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <StackLayout backgroundColor="#3c495e">
+    <Label
+        text="helló...21235555"
+        horizontalAlignment="left"
+        width="33%"
+        height="70"
+        backgroundColor="#43B3F4"
+    />
+    </StackLayout>
+</Page>
