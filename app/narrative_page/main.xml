@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <StackLayout backgroundColor="#3c495e">
     <Label
-        text="helló...21235555"
+        text="This is a quest scene"
         horizontalAlignment="left"
         width="33%"
         height="70"

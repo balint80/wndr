@@ -1,4 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="{{ title }}" icon="" />
-
+    <GridLayout rows="auto, *">
+    <Label row="0" text="{{ title }}"/>
+    <ContentView row="1">
+        <Frame defaultPage="./narrative_page/main" />
+    </ContentView>
+    </GridLayout>
 </Page>
