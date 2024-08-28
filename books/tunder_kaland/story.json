@@ -1,0 +1,72 @@
+{
+    "retries": 3,
+
+    "quests": [        
+        {
+            "_comment": "Mária szobor",
+            "scenes": [
+                {
+                    "type": "narrative_page",
+                    "content": "maria_szobor_1"
+                },
+                {
+                    "type": "challenge_text",
+                    "solution": "angyal",
+                    "content": "maria_szobor_2"
+                },
+                {
+                    "type": "narrative_page",
+                    "content": "maria_szobor_3"
+                }
+            ]
+        },
+
+        {
+            "_comment": "Festő köz",
+            "scenes": [
+                {
+                    "type": "narrative_page",
+                    "content": "festo_koz_1"
+                },
+                {
+                    "type": "challenge_options",
+                    "options": ["13", "17", "21"],
+                    "solution": "21",
+                    "content": "festo_koz_2"
+                },
+                {
+                    "type": "challenge_location",
+                    "solution": "47.68820446147669,16.590648582691305",
+                    "tolerance": "15",
+                    "content": "festo_koz_3"
+                }
+            ]
+        },
+
+        {
+            "_comment": "Fő tér",
+            "scenes": [
+                {
+                    "type": "narrative_page",
+                    "content": "fo_ter_1"
+                },
+                {
+                    "type": "challenge_number",
+                    "solution": "1975",
+                    "content": "fo_ter_2"
+                }
+            ]
+        }
+    ],
+
+    "ending": {
+        "success": {
+            "type": "narrative_ar",
+            "content": "vege_sikerult"
+        },
+        "failure": {
+            "type": "narrative_text",
+            "content": "vege_nem_sikerult"
+        }
+    }
+}
