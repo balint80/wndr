@@ -1,6 +1,19 @@
 import { Observable } from '@nativescript/core';
-import { QuestScene } from '../quest_scene/model';
+import { Scene } from '../scene/model';
 
 export class Quest extends Observable {
-    private scenes: QuestScene[];
+    private title: string;
+    private scenes: Scene[];
+
+    constructor(config: JSON) {
+        super();
+        this.title = config['title'];
+        
+        this.scenes = [];
+        config['scenes'].forEach((scene_config) => {
+            var scene = new Scene(scene_config as JSON);
+            this.scenes.push(scene);
+        });
+    }
+
 }

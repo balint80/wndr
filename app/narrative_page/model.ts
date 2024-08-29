@@ -1,4 +1,4 @@
-import { QuestScene } from '../quest_scene/model';
+import { Scene } from '../scene/model';
 
-export class NarrativePage extends QuestScene {
+export class NarrativePage extends Scene {
 }

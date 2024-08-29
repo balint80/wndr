@@ -1,4 +1,4 @@
-import { Scene } from '../quest_scene/model';
+import { Scene } from '../scene/model';
 
 export class Challenge extends Scene {
     private solution: string;

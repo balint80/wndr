@@ -4,7 +4,7 @@
 
     "quests": [        
         {
-            "_comment": "Mária szobor",
+            "title": "Mária szobor",
             "scenes": [
                 {
                     "type": "narrative_page",
@@ -23,7 +23,7 @@
         },
 
         {
-            "_comment": "Festő köz",
+            "title": "Festő köz",
             "scenes": [
                 {
                     "type": "narrative_page",
@@ -45,7 +45,7 @@
         },
 
         {
-            "_comment": "Fő tér",
+            "title": "Fő tér",
             "scenes": [
                 {
                     "type": "narrative_page",
