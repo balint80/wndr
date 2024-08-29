@@ -1,2 +1,2 @@
-<Frame defaultPage="./game/main">
+<Frame id="main-frame" defaultPage="./game/main">
 </Frame>

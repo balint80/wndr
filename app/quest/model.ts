@@ -10,8 +10,8 @@ export class Quest extends Observable {
         this.title = config['title'];
         
         this.scenes = [];
-        config['scenes'].forEach((scene_config) => {
-            var scene = new Scene(scene_config as JSON);
+        config['scenes'].forEach((scene_config: JSON) => {
+            var scene = new Scene(scene_config);
             this.scenes.push(scene);
         });
     }

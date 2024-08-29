@@ -1,4 +1,4 @@
-import { Observable } from '@nativescript/core';
+import { Frame, Observable } from '@nativescript/core';
 import { Quest } from '../quest/model';
 
 export class Game extends Observable {
@@ -10,9 +10,16 @@ export class Game extends Observable {
         this.title = config['title'];
 
         this.quests = [];
-        config['quests'].forEach((quest_config) => {
-            var quest = new Quest(quest_config as JSON);
+        config['quests'].forEach((quest_config: JSON) => {
+            var quest = new Quest(quest_config);
             this.quests.push(quest);
+        });
+    }
+
+    startGame() {
+        Frame.topmost().navigate({
+            moduleName: 'quest/main',
+            context: { quest: this.quests[0] }
         });
     }
 }

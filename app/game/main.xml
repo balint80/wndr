@@ -1,8 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <GridLayout rows="auto, *">
-    <Label row="0" text="{{ title }}"/>
-    <ContentView row="1">
-        <Frame defaultPage="./narrative_page/main" />
-    </ContentView>
-    </GridLayout>
+    <ActionBar title="{{ title }}" />
+    <StackLayout>
+        <Label text="Welcome to the game..." height="70" backgroundColor="#43B3F4" />
+        <Button text="Start the game" tap="{{ startGame }}"/>
+    </StackLayout>
 </Page>
