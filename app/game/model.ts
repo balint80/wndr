@@ -1,25 +1,24 @@
 import { Frame, Observable } from '@nativescript/core';
-import { Quest } from '../quest/model';
+import { CreateScene, IScene } from '~/scene/model';
 
 export class Game extends Observable {
     private title: string;
-    private quests: Quest[];
+    private scenes: IScene[];
 
     constructor(config: JSON) {
         super();
         this.title = config['title'];
 
-        this.quests = [];
-        config['quests'].forEach((quest_config: JSON) => {
-            var quest = new Quest(quest_config);
-            this.quests.push(quest);
+        this.scenes = [];
+        config['scenes'].forEach((sceneConfig: JSON) => {
+            this.scenes.push(CreateScene(sceneConfig));
         });
     }
 
     startGame() {
         Frame.topmost().navigate({
-            moduleName: 'quest/main',
-            context: { quest: this.quests[0] }
+            moduleName: 'scene/main',
+            context: { quest: this.scenes[0] }
         });
     }
 }
