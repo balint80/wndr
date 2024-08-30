@@ -7,31 +7,30 @@ import { SceneTrialOptions } from '~/scene_trial_options/model';
 export class Game extends Observable {
     title: string;
     scenes: IScene[];
-    currentScene = 0;
+    nextScene = 0;
 
     constructor(config: JSON) {
         super();
         this.title = config['title'];
-        console.log(`Initializing game "${this.title}"`);
+        console.log(`Initializing "${this.title}"`);
 
         // scenes
-        this.currentScene = -1;
         this.scenes = [];
         if (config.hasOwnProperty('scenes')) {
             config['scenes'].forEach((sceneConfig: JSON) => {
                 let scene: IScene;
                 switch (config['type']) {
                     case 'trial':
-                        scene = new SceneTrial(sceneConfig);
+                        scene = new SceneTrial(sceneConfig, this.OnSceneDone);
                         break;
                     case 'trial-location':
-                        scene = new SceneTrialLocation(sceneConfig);
+                        scene = new SceneTrialLocation(sceneConfig, this.OnSceneDone);
                         break;
                     case 'trial-options':
-                        scene = new SceneTrialOptions(sceneConfig);
+                        scene = new SceneTrialOptions(sceneConfig, this.OnSceneDone);
                         break;
                     default:
-                        scene = new Scene(sceneConfig);
+                        scene = new Scene(sceneConfig, this.OnSceneDone);
                         break;
                 }
                 this.scenes.push(scene);
@@ -41,24 +40,34 @@ export class Game extends Observable {
         console.log(`${this.scenes.length} scenes loaded`);
     }
 
-    ShowNextScene() {
-        this.currentScene++;
-
-        if (this.scenes.length <= this.currentScene) {
-            // end - success
-            this.ShowEndSuccess();
-        }
-
-        else {
-            this.scenes[this.currentScene].Show();
-        }
+    StartGame() {
+        this.nextScene = 0;
+        this.scenes[this.nextScene].Show();
     }
 
-    ShowEndSuccess() {
-        // ... 
+    OnSceneDone(success: boolean) {
+        if (!success) {
+            this.ShowEndSceneFailure();
+            return;
+        }
+        
+        this.nextScene++;
+        
+        if (this.scenes.length <= this.nextScene ) {
+            this.ShowEndSceneSuccess();
+            return;
+        }
+
+        this.scenes[this.nextScene].Show();
     }
 
-    ShowEndFailure() {
+    ShowEndSceneSuccess() {
         // ... 
+        console.log("Done - success");
+    }
+
+    ShowEndSceneFailure() {
+        // ... 
+        console.log("Done - no success");
     }
 }

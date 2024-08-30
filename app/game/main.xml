@@ -2,6 +2,6 @@
     <ActionBar title="{{ title }}" />
     <StackLayout>
         <Label text="Welcome to the game..." height="30" backgroundColor="#43B3F4" />
-        <Button text="Start the game" tap="{{ ShowNextScene }}"/>
+        <Button text="Start the game" tap="{{ StartGame }}"/>
     </StackLayout>
 </Page>
