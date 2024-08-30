@@ -4,6 +4,13 @@ import { SceneTrial } from '~/scene_trial/model';
 import { SceneTrialLocation } from '~/scene_trial_location/model';
 import { SceneTrialOptions } from '~/scene_trial_options/model';
 
+var sceneTypeMap = {
+    'trial': SceneTrial,
+    'trial-location': SceneTrialLocation,
+    'trial-options': SceneTrialOptions,
+    undefined: Scene
+}
+
 export class Game extends Observable {
     title: string;
     scenes: IScene[];
@@ -18,22 +25,8 @@ export class Game extends Observable {
         this.scenes = [];
         if (config.hasOwnProperty('scenes')) {
             config['scenes'].forEach((sceneConfig: JSON) => {
-                let scene: IScene;
-                let callback = this.OnSceneDone.bind(this);
-                switch (config['type']) {
-                    case 'trial':
-                        scene = new SceneTrial(sceneConfig, callback);
-                        break;
-                    case 'trial-location':
-                        scene = new SceneTrialLocation(sceneConfig, callback);
-                        break;
-                    case 'trial-options':
-                        scene = new SceneTrialOptions(sceneConfig, callback);
-                        break;
-                    default:
-                        scene = new Scene(sceneConfig, callback);
-                        break;
-                }
+                let sceneClass = sceneTypeMap[config['type']];
+                let scene = new sceneClass(sceneConfig, this.OnSceneDone.bind(this));
                 this.scenes.push(scene);
             });
         }
