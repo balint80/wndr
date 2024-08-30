@@ -5,7 +5,6 @@ export class SceneTrial extends Scene {
 
     constructor(config: JSON) {
         super(config);
-
         this.#solution = config['solution'];
     }
 }

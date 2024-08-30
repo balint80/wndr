@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="{{ title }}" />
+    <ActionBar title="hello" />
     <StackLayout>
         <Label text="Welcome to the game..." height="70" backgroundColor="#43B3F4" />
-        <Button text="Start the game" tap="{{ startGame }}"/>
+        <Button text="Start the game"/>
     </StackLayout>
 </Page>

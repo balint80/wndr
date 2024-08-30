@@ -1,4 +1,5 @@
-import { CreateScene, Scene } from "~/scene/model";
+import { Scene } from "~/scene/model";
+import { SceneFactory } from '~/scene/scene_factory';
 
 export class SceneGroup extends Scene {
     subScenes: Scene[];
@@ -6,11 +7,10 @@ export class SceneGroup extends Scene {
     constructor(config: JSON) {
         super(config);
 
-        // sub scenes
         this.subScenes = [];
         if (config.hasOwnProperty('scenes')) {
             config['scenes'].forEach((subSceneConfig: JSON) => {
-                this.subScenes.push(CreateScene(subSceneConfig));
+                this.subScenes.push(SceneFactory.CreateScene(subSceneConfig));
             });
         }
     }
