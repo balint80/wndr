@@ -3,6 +3,8 @@ import { Observable } from '@nativescript/core';
 export interface IScene  {
     title: string;
     contentHtml: string;
+
+    Show(): void;
 }
 
 export class Scene extends Observable implements IScene {
@@ -14,5 +16,9 @@ export class Scene extends Observable implements IScene {
 
         this.title = config['title'];
         this.contentHtml = config['contentHtml'];
+    }
+
+    Show() {
+        console.log(this.contentHtml);
     }
 }

@@ -1,26 +1,62 @@
-import { Frame, Observable } from '@nativescript/core';
-import { IScene } from '~/scene/model';
-import { SceneFactory } from '~/scene/scene_factory';
+import { Observable } from '@nativescript/core';
+import { IScene, Scene } from '~/scene/model';
+import { SceneTrial } from '~/scene_trial/model';
+import { SceneTrialLocation } from '~/scene_trial_location/model';
+import { SceneTrialOptions } from '~/scene_trial_options/model';
 
 export class Game extends Observable {
-    private title: string;
-    private scenes: IScene[];
+    title: string;
+    scenes: IScene[];
+    currentScene = 0;
 
     constructor(config: JSON) {
         super();
         this.title = config['title'];
         console.log(`Initializing game "${this.title}"`);
 
+        // scenes
+        this.currentScene = -1;
         this.scenes = [];
-        config['scenes'].forEach((sceneConfig: JSON) => {
-            this.scenes.push(SceneFactory.CreateScene(sceneConfig));
-        });
+        if (config.hasOwnProperty('scenes')) {
+            config['scenes'].forEach((subSceneConfig: JSON) => {
+                let scene: IScene;
+                switch (config['type']) {
+                    case 'trial':
+                        scene = new SceneTrial(config);
+                        break;
+                    case 'trial-location':
+                        scene = new SceneTrialLocation(config);
+                        break;
+                    case 'trial-options':
+                        scene = new SceneTrialOptions(config);
+                        break;
+                    default:
+                        scene = new Scene(config);
+                        break;
+                }
+                this.scenes.push(scene);
+            });
+        }
     }
-/*
-    startGame() {
-        Frame.topmost().navigate({
-            moduleName: 'scene/main',
-            context: { quest: this.scenes[0] }
-        });
-    }*/
+
+    ShowNextScene() {
+        this.currentScene++;
+
+        if (this.scenes.length <= this.currentScene) {
+            // end - success
+            this.ShowEndSuccess();
+        }
+
+        else {
+            this.scenes[this.currentScene].Show();
+        }
+    }
+
+    ShowEndSuccess() {
+        // ... 
+    }
+
+    ShowEndFailure() {
+        // ... 
+    }
 }

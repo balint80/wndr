@@ -4,39 +4,27 @@
 
     "scenes": [        
         {
-            "type": "group",
-            "title": "Mária szobor",
-            "scenes": [
-                {
-                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor. Fusce rutrum orci id iaculis aliquam. Mauris eu ipsum felis. Phasellus pulvinar finibus ante, a vulputate sem sodales laoreet."
-                },
-                {
-                    "type": "trial",
-                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor.",
-                    "solution": "angyal"
-                },
-                {
-                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                }
-            ]
+            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor. Fusce rutrum orci id iaculis aliquam. Mauris eu ipsum felis. Phasellus pulvinar finibus ante, a vulputate sem sodales laoreet."
         },
-
         {
-            "title": "Festő köz",
-            "scenes": [
-                {
-                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet."
-                },
-                {
-                    "type": "trial_options",
-                    "options": ["13", "17", "21"],
-                    "solution": "21",
-                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                },
-                {
-                    "contentHtml": "Lorem ipsum."
-                }
-            ]
+            "type": "trial",
+            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor.",
+            "solution": "angyal"
+        },
+        {
+            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet."
+        },
+        {
+            "type": "trial_options",
+            "options": ["13", "17", "21"],
+            "solution": "21",
+            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "contentHtml": "Lorem ipsum."
         }
     ],
 
