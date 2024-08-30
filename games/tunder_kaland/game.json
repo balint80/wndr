@@ -2,22 +2,21 @@
     "title": "Tündér Kaland",
     "retries": 3,
 
-    "quests": [        
+    "scenes": [        
         {
+            "type": "group",
             "title": "Mária szobor",
             "scenes": [
                 {
-                    "type": "narrative_page",
-                    "content": "maria_szobor_1"
+                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor. Fusce rutrum orci id iaculis aliquam. Mauris eu ipsum felis. Phasellus pulvinar finibus ante, a vulputate sem sodales laoreet."
                 },
                 {
-                    "type": "challenge_text",
-                    "solution": "angyal",
-                    "content": "maria_szobor_2"
+                    "type": "trial",
+                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor.",
+                    "solution": "angyal"
                 },
                 {
-                    "type": "narrative_page",
-                    "content": "maria_szobor_3"
+                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 }
             ]
         },
@@ -26,35 +25,16 @@
             "title": "Festő köz",
             "scenes": [
                 {
-                    "type": "narrative_page",
-                    "content": "festo_koz_1"
+                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet."
                 },
                 {
-                    "type": "challenge_options",
+                    "type": "trial_options",
                     "options": ["13", "17", "21"],
                     "solution": "21",
-                    "content": "festo_koz_2"
+                    "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 },
                 {
-                    "type": "challenge_location",
-                    "solution": "47.68820446147669,16.590648582691305",
-                    "tolerance": "15",
-                    "content": "festo_koz_3"
-                }
-            ]
-        },
-
-        {
-            "title": "Fő tér",
-            "scenes": [
-                {
-                    "type": "narrative_page",
-                    "content": "fo_ter_1"
-                },
-                {
-                    "type": "challenge_number",
-                    "solution": "1975",
-                    "content": "fo_ter_2"
+                    "contentHtml": "Lorem ipsum."
                 }
             ]
         }
@@ -62,12 +42,10 @@
 
     "ending": {
         "success": {
-            "type": "narrative_ar",
-            "content": "vege_sikerult"
+            "contentHtml": "Lorem ipsum :)"
         },
         "failure": {
-            "type": "narrative_text",
-            "content": "vege_nem_sikerult"
+            "contentHtml": "Lorem ipsum :("
         }
     }
 }

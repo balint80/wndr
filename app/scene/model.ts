@@ -1,38 +1,29 @@
 import { Observable } from '@nativescript/core';
+import { SceneGroup } from '~/scene_group/model';
 import { SceneTrial } from '~/scene_trial/model';
 import { SceneTrialOptions } from '~/scene_trial_options/model';
 
 export interface IScene  {
     title: string;
     contentHtml: string;
-
-    subScenes: Scene[];
 }
 
 export class Scene extends Observable implements IScene {
     title: string;
     contentHtml: string;
 
-    subScenes: Scene[];
-
     constructor(config: JSON) {
         super();
 
         this.title = config['title'];
-        this.contentHtml = config['contentHtml'];
-        
-        // sub scenes
-        this.subScenes = [];
-        if (config.hasOwnProperty('scenes')) {
-            config['scenes'].forEach((subSceneConfig: JSON) => {
-                this.subScenes.push(CreateScene(subSceneConfig));
-            });
-        }
+        this.contentHtml = config['contentHtml'];        
     }
 }
 
 export function CreateScene(config: JSON) {
     switch (config['type']) {
+        case 'group':
+            return new SceneGroup(config);
         case 'trial':
             return new SceneTrial(config);
         case 'trial-options':
