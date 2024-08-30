@@ -19,18 +19,19 @@ export class Game extends Observable {
         if (config.hasOwnProperty('scenes')) {
             config['scenes'].forEach((sceneConfig: JSON) => {
                 let scene: IScene;
+                let callback = this.OnSceneDone.bind(this);
                 switch (config['type']) {
                     case 'trial':
-                        scene = new SceneTrial(sceneConfig, this.OnSceneDone);
+                        scene = new SceneTrial(sceneConfig, callback);
                         break;
                     case 'trial-location':
-                        scene = new SceneTrialLocation(sceneConfig, this.OnSceneDone);
+                        scene = new SceneTrialLocation(sceneConfig, callback);
                         break;
                     case 'trial-options':
-                        scene = new SceneTrialOptions(sceneConfig, this.OnSceneDone);
+                        scene = new SceneTrialOptions(sceneConfig, callback);
                         break;
                     default:
-                        scene = new Scene(sceneConfig, this.OnSceneDone);
+                        scene = new Scene(sceneConfig, callback);
                         break;
                 }
                 this.scenes.push(scene);
@@ -50,7 +51,7 @@ export class Game extends Observable {
             this.ShowEndSceneFailure();
             return;
         }
-        
+
         this.nextScene++;
         
         if (this.scenes.length <= this.nextScene ) {

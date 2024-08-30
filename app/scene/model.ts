@@ -6,7 +6,7 @@ export interface IScene  {
     doneCallback: (success: boolean) => void;
     
     Show(): void;
-    Done(success: boolean): void;
+    Done(): void;
 }
 
 export class Scene extends Observable implements IScene {
@@ -22,15 +22,13 @@ export class Scene extends Observable implements IScene {
     }
 
     Show() {
-        console.log(this.contentHtml);
-
         Frame.topmost().navigate({
             moduleName: 'scene/main',
-            context: {}
+            context: { scene: this }
         });
     }
 
-    Done(success: boolean) {
-        this.doneCallback(success);
+    Done() {
+        this.doneCallback(true);
     }
 }

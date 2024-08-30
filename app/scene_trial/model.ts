@@ -9,6 +9,6 @@ export class SceneTrial extends Scene {
     }
 
     CheckAnswer() {
-        this.Done(true);
+        this.Done();
     }
 }
