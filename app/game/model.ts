@@ -18,25 +18,27 @@ export class Game extends Observable {
         this.currentScene = -1;
         this.scenes = [];
         if (config.hasOwnProperty('scenes')) {
-            config['scenes'].forEach((subSceneConfig: JSON) => {
+            config['scenes'].forEach((sceneConfig: JSON) => {
                 let scene: IScene;
                 switch (config['type']) {
                     case 'trial':
-                        scene = new SceneTrial(config);
+                        scene = new SceneTrial(sceneConfig);
                         break;
                     case 'trial-location':
-                        scene = new SceneTrialLocation(config);
+                        scene = new SceneTrialLocation(sceneConfig);
                         break;
                     case 'trial-options':
-                        scene = new SceneTrialOptions(config);
+                        scene = new SceneTrialOptions(sceneConfig);
                         break;
                     default:
-                        scene = new Scene(config);
+                        scene = new Scene(sceneConfig);
                         break;
                 }
                 this.scenes.push(scene);
             });
         }
+
+        console.log(`${this.scenes.length} scenes loaded`);
     }
 
     ShowNextScene() {

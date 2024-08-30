@@ -13,7 +13,6 @@ export class Scene extends Observable implements IScene {
 
     constructor(config: JSON) {
         super();
-
         this.title = config['title'];
         this.contentHtml = config['contentHtml'];
     }
