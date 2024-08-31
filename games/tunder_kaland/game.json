@@ -2,38 +2,70 @@
     "title": "Tündér Kaland",
     "retries": 3,
 
-    "scenes": [        
+    "scenes": [
         {
-            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor. Fusce rutrum orci id iaculis aliquam. Mauris eu ipsum felis. Phasellus pulvinar finibus ante, a vulputate sem sodales laoreet."
+            "type": "trial-location",
+            "sytle": "kids-game.css",
+            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, automatikusan indul az első feladat.",
+            "next-button-hide": true, 
+            "next-auto": true
         },
         {
-            "type": "trial",
-            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet. Praesent a augue hendrerit mauris consectetur hendrerit. Nam interdum ultrices magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas volutpat quam sit amet tellus tincidunt placerat. Maecenas finibus felis a justo elementum, quis porta urna tempor.",
-            "solution": "angyal"
+            "type": "story",
+            "sytle": "kids-game.css",
+            "content-html": "Kedves Tündér-kalandozó! Az applikáció segítségével játékosan tanulhatsz a természetről. Az lesz a feladatod, hogy fákat, virágokat és más növényeket fotózz le a kezedben tartott mobil eszköz segítségével. A fotókat pedig együtt kielemezzük és összehasonlítjuk. Kezdjük is el!",
+            "next-button-text": "Rajta"
         },
         {
-            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "type": "trial-photo",
+            "sytle": "kids-game.css",
+            "content-html": "Először is készíts egy fényképet egy szép nagy fáról!",
+            "success-animation": "thumbs-up.gif" 
         },
         {
-            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet."
+            "type": "trial-photo",
+            "sytle": "kids-game.css",
+            "content-html": "Nagyon jó kép lett! Most pedig fotózz le egy bokrot!",
+            "success-animation": "thumbs-up.gif" 
         },
         {
-            "type": "trial_options",
+            "type": "trial-photo-ar",
+            "sytle": "kids-game.css",
+            "content-html": "Ügyes vagy! A harmadik kép egy fűszál vagy egy virág legyen!",
+            "content-ar": "fairy.model",
+            "success-animation": "style-change.gif" 
+        },
+        {
+            "type": "story",
+            "sytle": "fairy-game.css",
+            "content-html": "Várj, várj... Trilla vagyok! Az apukám, a Tündér Király, nagy bajban van! Csak egy ember-gyerek tud segíteni. Rájöttem, hogy ezeken a mobil-izéken, ami mindig a kezetekben van, tudok veletek kommunikálni. Így együtt talán meg tudjuk oldani a rejtélyt és megmenthetjük apukámat, és a Tündér Királyságot. Segítesz? Ugye segítesz?",
+            "next-button-text": "Igen",
+            "exit-button-hide": false, 
+            "exit-button-text": "Nem"
+        },
+        {
+            "content-html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "content-html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper ipsum eu tincidunt imperdiet."
+        },
+        {
+            "type": "trial-options",
             "options": ["13", "17", "21"],
             "solution": "21",
-            "contentHtml": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "content-html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            "contentHtml": "Lorem ipsum."
+            "content-html": "Lorem ipsum."
         }
     ],
 
     "ending": {
         "success": {
-            "contentHtml": "Lorem ipsum :)"
+            "content-html": "Lorem ipsum :)"
         },
         "failure": {
-            "contentHtml": "Lorem ipsum :("
+            "content-html": "Lorem ipsum :("
         }
     }
 }

@@ -8,6 +8,9 @@ var sceneTypeMap = {
     'trial': SceneTrial,
     'trial-location': SceneTrialLocation,
     'trial-options': SceneTrialOptions,
+    'trial-photo': SceneTrial,
+    'trial-photo-ar': SceneTrial,
+    'story': Scene,
     undefined: Scene
 }
 

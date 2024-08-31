@@ -17,7 +17,7 @@ export class Scene extends Observable implements IScene {
     constructor(config: JSON, doneCB: (success: boolean) => void) {
         super();
         this.title = config['title'];
-        this.contentHtml = config['contentHtml'];
+        this.contentHtml = config['content-html'];
         this.doneCallback = doneCB;
     }
 
