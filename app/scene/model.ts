@@ -1,4 +1,5 @@
 import { Frame, Observable } from '@nativescript/core';
+import { Logger, Severity } from '~/utils/logger';
 
 export interface IScene  {
     Show(): void;
@@ -50,7 +51,7 @@ export class Scene extends Observable implements IScene {
         if (value === undefined)
         {
             if (defaultValue === null){
-                console.log(`Warning: ${key} missing from config for scene with title "${this.title}", and no default value provided`);
+                Logger.Log(Severity.Warning, `"${key}" missing from config for scene with title "${this.title}", and no default value provided`);
                 return null;
             }
             return defaultValue;

@@ -3,6 +3,7 @@ import { IScene, Scene } from '~/scene/model';
 import { SceneTrial } from '~/scene_trial/model';
 import { SceneTrialLocation } from '~/scene_trial_location/model';
 import { SceneTrialOptions } from '~/scene_trial_options/model';
+import { Logger, Severity } from '~/utils/logger';
 
 var sceneTypeMap = {
     'trial': SceneTrial,
@@ -22,19 +23,22 @@ export class Game extends Observable {
     constructor(gameConfig: JSON) {
         super();
         this.title = gameConfig['title'];
-        console.log(`Initializing "${this.title}"`);
+        Logger.Log(Severity.Info, `Initializing "${this.title}"`);
 
         // scenes
         this.scenes = [];
         if (gameConfig.hasOwnProperty('scenes')) {
             gameConfig['scenes'].forEach((sceneConfig: JSON) => {
                 let sceneClass = sceneTypeMap[gameConfig['type']];
+                if (sceneClass === undefined) {
+
+                }
                 let scene = new sceneClass(sceneConfig, gameConfig, this.OnSceneDone.bind(this));
                 this.scenes.push(scene);
             });
         }
 
-        console.log(`${this.scenes.length} scenes loaded`);
+        Logger.Log(Severity.Info, `${this.scenes.length} scenes loaded`);
     }
 
     StartGame() {
@@ -63,11 +67,11 @@ export class Game extends Observable {
 
     ShowEndSceneSuccess() {
         // ... 
-        console.log("Done - success");
+        Logger.Log(Severity.Info, "Done - success");
     }
 
     ShowEndSceneFailure() {
         // ... 
-        console.log("Done - no success");
+        Logger.Log(Severity.Info, "Done - no success");
     }
 }
