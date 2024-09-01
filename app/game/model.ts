@@ -29,9 +29,10 @@ export class Game extends Observable {
         this.scenes = [];
         if (gameConfig.hasOwnProperty('scenes')) {
             gameConfig['scenes'].forEach((sceneConfig: JSON) => {
-                let sceneClass = sceneTypeMap[gameConfig['type']];
+                let sceneType = sceneConfig['type'];
+                let sceneClass = sceneTypeMap[sceneType];
                 if (sceneClass === undefined) {
-
+                    Logger.Log(Severity.Error, `Can't create scene with type "${sceneType}", not mapped to any scene class`);  
                 }
                 let scene = new sceneClass(sceneConfig, gameConfig, this.OnSceneDone.bind(this));
                 this.scenes.push(scene);
