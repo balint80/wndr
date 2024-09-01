@@ -1,4 +1,4 @@
-import { SceneTrial } from '~/scene_trial/model';
+import { SceneTrial } from '../scene_trial/model';
 
 export class SceneTrialOptions extends SceneTrial {
     options: string[];

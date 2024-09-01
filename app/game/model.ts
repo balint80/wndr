@@ -1,7 +1,7 @@
 import { Observable } from '@nativescript/core';
-import { IScene, Scene } from '~/scene/model';
-import { GetSceneClass } from '~/scene/scene-factory';
-import { Logger, Severity } from '~/utils/logger';
+import { IScene, Scene } from '../scene/model';
+import { GetSceneClass } from '../scene/scene-factory';
+import { Logger, Severity } from '../utils/logger';
 
 
 export class Game extends Observable {

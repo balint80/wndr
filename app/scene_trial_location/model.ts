@@ -1,4 +1,4 @@
-import { SceneTrial } from '~/scene_trial/model';
+import { SceneTrial } from '../scene_trial/model';
 
 export class SceneTrialLocation extends SceneTrial {
     CheckAnswer(): boolean {

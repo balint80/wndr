@@ -1,4 +1,4 @@
-import { Scene } from '~/scene/model';
+import { Scene } from '../scene/model';
 
 export class SceneTrial extends Scene {
     solution: string;

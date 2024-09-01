@@ -1,5 +1,5 @@
-import { SceneTrial } from '~/scene_trial/model';
 import { requestPermissions } from '@nativescript/camera'
+import { SceneTrial } from '../scene_trial/model';
 
 export class SceneTrialCamera extends SceneTrial {
     RequestNeededPermissions(): void {

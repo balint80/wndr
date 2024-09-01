@@ -1,5 +1,5 @@
 import { Frame, Observable } from '@nativescript/core';
-import { Logger, Severity } from '~/utils/logger';
+import { Logger, Severity } from '../utils/logger';
 
 export interface IScene  {
     Show(): void;
@@ -31,9 +31,8 @@ export class Scene extends Observable implements IScene {
     }
 
     Show() {
-        console.log(`${this.#GetModuleName()}/main`);
         Frame.topmost().navigate({
-            moduleName: "scene_trial_camera/main",
+            moduleName: this.#GetModuleName(),
             context: { scene: this }
         });
     }
@@ -65,6 +64,7 @@ export class Scene extends Observable implements IScene {
     }
 
     #GetModuleName(): string {
-        return (this.constructor.name.replace(/(?<!^)(?=[A-Z])/g, '_')).toLowerCase();
+        let moduleName = (this.constructor.name.replace(/(?<!^)(?=[A-Z])/g, '_')).toLowerCase();
+        return `${moduleName}/main`
     }
 }
