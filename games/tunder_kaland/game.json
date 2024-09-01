@@ -6,14 +6,12 @@
         {
             "type": "trial-location",
             "sytle": "kids-game.css",
-            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, automatikusan indul az első feladat.",
-            "next-button-hide": true, 
-            "next-auto": true
+            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, automatikusan indul az első feladat."
         },
         {
             "type": "story",
             "sytle": "kids-game.css",
-            "content-html": "Kedves Tündér-kalandozó! Az applikáció segítségével játékosan tanulhatsz a természetről. Az lesz a feladatod, hogy fákat, virágokat és más növényeket fotózz le a kezedben tartott mobil eszköz segítségével. A fotókat pedig együtt kielemezzük és összehasonlítjuk. Kezdjük is el!",
+            "content-html": "Kedves Tündér-kalandozó! Az applikáció segítségével játékosan tanulhatsz a természetről. Az lesz a feladatod, hogy fákat, virágokat és más növényeket fotózz le a kezedben tartott mobil eszköz segítségével. A fotókat pedig együtt kielemezzük, összehasonlítjuk. Kezdjük is el!",
             "next-button-text": "Rajta"
         },
         {
@@ -38,7 +36,7 @@
         {
             "type": "story",
             "sytle": "fairy-game.css",
-            "content-html": "Várj, várj... Trilla vagyok! Az apukám, a Tündér Király, nagy bajban van! Csak egy ember-gyerek tud segíteni. Rájöttem, hogy ezeken a mobil-izéken, ami mindig a kezetekben van, tudok veletek kommunikálni. Így együtt talán meg tudjuk oldani a rejtélyt és megmenthetjük apukámat, és a Tündér Királyságot. Segítesz? Ugye segítesz?",
+            "content-html": "Szia! Trilla vagyok. Az apukám, a Tündér Király, nagy bajban van! Csak az ember-gyerekek tudnak nekünk segíteni. Rájöttem, hogy egy varázslattal tudok nektek üzenni ezeken a mobil-izéken, ami mindig a kezetekben van. Így együtt talán meg tudjuk oldani a rejtélyt és megmenthetjük apukámat a Tündér Királyt, meg az egész Tündér Királyságot. De sietnünk kell, a varázslatom egy idő múlva erejét veszti! Segítesz? Ugye segítesz?",
             "next-button-text": "Igen",
             "exit-button-hide": false, 
             "exit-button-text": "Nem"
