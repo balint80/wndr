@@ -1,19 +1,8 @@
 import { Observable } from '@nativescript/core';
 import { IScene, Scene } from '~/scene/model';
-import { SceneTrial } from '~/scene_trial/model';
-import { SceneTrialLocation } from '~/scene_trial_location/model';
-import { SceneTrialOptions } from '~/scene_trial_options/model';
+import { GetSceneClass } from '~/scene/scene-factory';
 import { Logger, Severity } from '~/utils/logger';
 
-var sceneTypeMap = {
-    'trial': SceneTrial,
-    'trial-location': SceneTrialLocation,
-    'trial-options': SceneTrialOptions,
-    'trial-photo': SceneTrial,
-    'trial-photo-ar': SceneTrial,
-    'story': Scene,
-    undefined: Scene
-}
 
 export class Game extends Observable {
     title: string;
@@ -29,11 +18,7 @@ export class Game extends Observable {
         this.scenes = [];
         if (gameConfig.hasOwnProperty('scenes')) {
             gameConfig['scenes'].forEach((sceneConfig: JSON) => {
-                let sceneType = sceneConfig['type'];
-                let sceneClass = sceneTypeMap[sceneType];
-                if (sceneClass === undefined) {
-                    Logger.Log(Severity.Error, `Can't create scene with type "${sceneType}", not mapped to any scene class`);  
-                }
+                let sceneClass = GetSceneClass(sceneConfig);
                 let scene = new sceneClass(sceneConfig, gameConfig, this.OnSceneDone.bind(this));
                 this.scenes.push(scene);
             });
