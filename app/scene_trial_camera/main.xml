@@ -1,6 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <StackLayout>
         <Label text="{{ contentHtml }}" height="230" backgroundColor="#FF43F4" textWrap="true" />
+        <Placeholder creatingView="onCreatingView" id="placeholder-view"/>
         <Button text="{{ nextButtonText }}" tap="{{ ShowNext }}"/>
     </StackLayout>
 </Page>

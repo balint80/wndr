@@ -1,0 +1,17 @@
+--- Game ---
+Each game is a set of scenes. The game's responsibility is deciding which scene comes next and 
+triggering it.  
+
+--- Scenes ---
+Each scene is a page, waiting for user interaction. Each scene type has its own logic, controlling when 
+and how the user can proceed to the next one.
+
+E.g. 
+- The scene is just some text where the user can proceed if they click the next button
+- The scene is a camera view, where the user can proceed if the take a certain kind of a photo
+
+Each scene type has its own module:
+- model.ts: the logic behind the given scene type - e.g. test if the taken picture contains the solution  
+- main.xml: the visualization of the given scene type - e.g. a camera view
+- main.ts:  the logic behind the visualization - e.g. the initialization of the camera view
+
