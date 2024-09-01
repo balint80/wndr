@@ -10,18 +10,20 @@
         {
             "type": "trial-location",
             "sytle": "kids-game.css",
-            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, automatikusan indul az első feladat."
+            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, indulhat az első feladat.",
+            "next-button-text": "Itt vagyok",
+            "max-trial-retries": -1
         },
         {
             "type": "story",
             "sytle": "kids-game.css",
-            "content-html": "Kedves Tündér-kalandozó! Az applikáció segítségével játékosan tanulhatsz a természetről. Az lesz a feladatod, hogy fákat, virágokat és más növényeket fotózz le a kezedben tartott mobil eszköz segítségével. A fotókat pedig együtt kielemezzük, összehasonlítjuk. Kezdjük is el!",
+            "content-html": "Kedves Tündér-kalandozó! Az applikáció segítségével játékosan tanulhatsz a természetről. Az lesz a feladatod, hogy fákat, virágokat és más növény fajtákat fotózz le a kezedben tartott mobil eszköz segítségével. Készen állsz a tanulásra? Kezdjük is el!",
             "next-button-text": "Rajta"
         },
         {
             "type": "trial-camera",
             "sytle": "kids-game.css",
-            "content-html": "Először is készíts egy fényképet egy szép nagy fáról!",
+            "content-html": "Először is készíts egy fényképet egy magas fáról!",
             "success-animation": "thumbs-up.gif" 
         },
         {
@@ -31,7 +33,7 @@
             "success-animation": "thumbs-up.gif" 
         },
         {
-            "type": "trial-camera-ar",
+            "type": "trial-camera",
             "sytle": "kids-game.css",
             "content-html": "Ügyes vagy! A harmadik kép egy fűszál vagy egy virág legyen!",
             "content-ar": "fairy.model",
@@ -40,10 +42,11 @@
         {
             "type": "story",
             "sytle": "fairy-game.css",
-            "content-html": "Szia! Trilla vagyok. Az apukám, a Tündér Király, nagy bajban van! Csak az ember-gyerekek tudnak nekünk segíteni. Rájöttem, hogy egy varázslattal tudok nektek üzenni ezeken a mobil-izéken, ami mindig a kezetekben van. Így együtt talán meg tudjuk oldani a rejtélyt és megmenthetjük apukámat a Tündér Királyt, meg az egész Tündér Királyságot. De sietnünk kell, a varázslatom egy idő múlva erejét veszti! Segítesz? Ugye segítesz?",
+            "content-html": "Szia! Trilla vagyok. Az apukám, a Tündér Király, nagy bajban van! Csak az ember-gyerekek tudnak nekünk segíteni. Rájöttem, hogy egy varázslattal tudok nektek üzenni ezeken a mobil-izéken, ami mindig a kezetekben van. Így együtt talán meg tudjuk oldani a rejtélyt és megmenthetjük apukámat a Tündér Királyt, meg az egész Tündér Királyságot. De sietnünk kell, és azt sem tudom, hogy mennyi ideig működik a varázslatom. Tudod, én is még csak gyerek-tündér vagyok. Segítesz? Ugye segítesz?",
             "next-button-text": "Igen",
             "exit-button-hide": false, 
-            "exit-button-text": "Nem"
+            "exit-button-text": "Nem",
+            "max-trial-retries": 0
         },
         {
             "content-html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
