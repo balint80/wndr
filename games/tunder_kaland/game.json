@@ -4,6 +4,10 @@
 
     "scenes": [
         {
+            "type": "trial-camera",
+            "content-html": "hghghgh"
+        },
+        {
             "type": "trial-location",
             "sytle": "kids-game.css",
             "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, automatikusan indul az első feladat."
@@ -15,19 +19,19 @@
             "next-button-text": "Rajta"
         },
         {
-            "type": "trial-photo",
+            "type": "trial-camera",
             "sytle": "kids-game.css",
             "content-html": "Először is készíts egy fényképet egy szép nagy fáról!",
             "success-animation": "thumbs-up.gif" 
         },
         {
-            "type": "trial-photo",
+            "type": "trial-camera",
             "sytle": "kids-game.css",
             "content-html": "Nagyon jó kép lett! Most pedig fotózz le egy bokrot!",
             "success-animation": "thumbs-up.gif" 
         },
         {
-            "type": "trial-photo-ar",
+            "type": "trial-camera-ar",
             "sytle": "kids-game.css",
             "content-html": "Ügyes vagy! A harmadik kép egy fűszál vagy egy virág legyen!",
             "content-ar": "fairy.model",
