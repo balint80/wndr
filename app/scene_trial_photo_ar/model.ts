@@ -1,8 +1,8 @@
-import { SceneTrial } from '~/scene_trial/model';
+import { SceneTrialPhoto } from '~/scene_trial_photo/model';
 //import * as camera from "@nativescript/camera";
 import { Image } from "@nativescript/core";
 
-export class SceneTrialPhotoAR extends SceneTrial {
+export class SceneTrialPhotoAR extends SceneTrialPhoto {
     CheckAnswer(): boolean {
   /*      camera.takePicture()
             .then((imageAsset) => {

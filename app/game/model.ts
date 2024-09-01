@@ -20,6 +20,7 @@ export class Game extends Observable {
             gameConfig['scenes'].forEach((sceneConfig: JSON) => {
                 let sceneClass = GetSceneClass(sceneConfig);
                 let scene = new sceneClass(sceneConfig, gameConfig, this.OnSceneDone.bind(this));
+                scene.RequestNeededPermissions();
                 this.scenes.push(scene);
             });
         }

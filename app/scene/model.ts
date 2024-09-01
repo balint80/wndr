@@ -3,6 +3,7 @@ import { Logger, Severity } from '~/utils/logger';
 
 export interface IScene  {
     Show(): void;
+    RequestNeededPermissions(): void;
 }
 
 export class Scene extends Observable implements IScene {
@@ -24,6 +25,9 @@ export class Scene extends Observable implements IScene {
         this.contentHtml = this.GetConfig('content-html');
         this.nextButtonText = this.GetConfig('next-button-text', "Következő");
         this.doneCallback = doneCB;
+    }
+
+    RequestNeededPermissions(): void {
     }
 
     Show() {
