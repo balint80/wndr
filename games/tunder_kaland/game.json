@@ -1,6 +1,6 @@
 {
     "title": "Tündér Kaland",
-    "retries": 3,
+    "max-trial-retries": 3,
 
     "scenes": [
         {

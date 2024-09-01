@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <StackLayout>
         <Label text="{{ contentHtml }}" height="230" backgroundColor="#B343F4" textWrap="true" />
-        <Button text="Next scene" tap="{{ Done }}"/>
+        <Button text="{{ nextButtonText }}" tap="{{ Done }}"/>
     </StackLayout>
 </Page>

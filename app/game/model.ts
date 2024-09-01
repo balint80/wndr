@@ -19,17 +19,17 @@ export class Game extends Observable {
     scenes: IScene[];
     nextScene = 0;
 
-    constructor(config: JSON) {
+    constructor(gameConfig: JSON) {
         super();
-        this.title = config['title'];
+        this.title = gameConfig['title'];
         console.log(`Initializing "${this.title}"`);
 
         // scenes
         this.scenes = [];
-        if (config.hasOwnProperty('scenes')) {
-            config['scenes'].forEach((sceneConfig: JSON) => {
-                let sceneClass = sceneTypeMap[config['type']];
-                let scene = new sceneClass(sceneConfig, this.OnSceneDone.bind(this));
+        if (gameConfig.hasOwnProperty('scenes')) {
+            gameConfig['scenes'].forEach((sceneConfig: JSON) => {
+                let sceneClass = sceneTypeMap[gameConfig['type']];
+                let scene = new sceneClass(sceneConfig, gameConfig, this.OnSceneDone.bind(this));
                 this.scenes.push(scene);
             });
         }
@@ -44,6 +44,7 @@ export class Game extends Observable {
 
     OnSceneDone(success: boolean) {
         if (!success) {
+            // current scene failed, end the game
             this.ShowEndSceneFailure();
             return;
         }
@@ -51,10 +52,12 @@ export class Game extends Observable {
         this.nextScene++;
         
         if (this.scenes.length <= this.nextScene ) {
+            // all scenes done, end the game
             this.ShowEndSceneSuccess();
             return;
         }
 
+        // go to the next scene
         this.scenes[this.nextScene].Show();
     }
 
