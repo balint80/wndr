@@ -3,13 +3,14 @@ import { SceneTrialLocation } from "~/scene_trial_location/model";
 import { SceneTrialOptions } from "~/scene_trial_options/model";
 import { Scene } from "./model";
 import { Logger, Severity } from "~/utils/logger";
+import { SceneTrialPhotoAR } from "~/scene_trial_photo_ar/model";
 
 export var sceneTypeMap = {
     'trial': SceneTrial,
     'trial-location': SceneTrialLocation,
     'trial-options': SceneTrialOptions,
     'trial-photo': SceneTrial,
-    'trial-photo-ar': SceneTrial,
+    'trial-photo-ar': SceneTrialPhotoAR,
     'story': Scene
 }
 
