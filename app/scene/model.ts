@@ -31,8 +31,9 @@ export class Scene extends Observable implements IScene {
     }
 
     Show() {
+        console.log(`${this.#GetModuleName()}/main`);
         Frame.topmost().navigate({
-            moduleName: 'scene/main',
+            moduleName: "scene_trial_camera/main",
             context: { scene: this }
         });
     }
@@ -61,5 +62,9 @@ export class Scene extends Observable implements IScene {
             return defaultValue;
         }
         return value;
+    }
+
+    #GetModuleName(): string {
+        return (this.constructor.name.replace(/(?<!^)(?=[A-Z])/g, '_')).toLowerCase();
     }
 }

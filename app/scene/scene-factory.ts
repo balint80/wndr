@@ -1,15 +1,16 @@
+import { Scene } from "./model";
 import { SceneTrial } from "~/scene_trial/model";
+import { SceneTrialCamera } from "~/scene_trial_camera/model";
+import { SceneTrialCameraAR } from "~/scene_trial_camera_ar/model";
 import { SceneTrialLocation } from "~/scene_trial_location/model";
 import { SceneTrialOptions } from "~/scene_trial_options/model";
-import { Scene } from "./model";
 import { Logger, Severity } from "~/utils/logger";
-import { SceneTrialCameraAR } from "~/scene_trial_camera_ar/model";
 
 export var sceneTypeMap = {
     'trial': SceneTrial,
     'trial-location': SceneTrialLocation,
     'trial-options': SceneTrialOptions,
-    'trial-camera': SceneTrial,
+    'trial-camera': SceneTrialCamera,
     'trial-camera-ar': SceneTrialCameraAR,
     'story': Scene
 }

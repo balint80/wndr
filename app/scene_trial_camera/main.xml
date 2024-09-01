@@ -1,8 +1,4 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded">
-    <Page.actionBar>
-        <Label text="AAAAAAAAAAAAAAAAAA"/>
-    </Page.actionBar>
-    <StackLayout>
-        <Label text="BBBBBBBBBBBBBBB"/>
-    </StackLayout>
+    <Label text="{{ contentHtml }}" height="230" backgroundColor="#FF0000" textWrap="true" />
+    <Button text="{{ nextButtonText }}" tap="{{ ShowNext }}"/>
 </Page>
