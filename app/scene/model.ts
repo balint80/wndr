@@ -37,7 +37,7 @@ export class Scene extends Observable implements IScene {
         });
     }
 
-    ShowNext(success=true) {
+    async ShowNext(success=true) {
         this.doneCallback(success);
     }
 

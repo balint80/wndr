@@ -12,12 +12,12 @@ export class SceneTrial extends Scene {
         this.currentRetries = 0;
     }
 
-    CheckAnswer(): boolean {
+    async CheckAnswer(): Promise<boolean> {
         return true;
     }
 
-    ShowNext() {
-        if (this.CheckAnswer()) {
+    async ShowNext() {
+        if (await this.CheckAnswer()) {
             // correct answer, go to the next scene
             super.ShowNext(true);
         }

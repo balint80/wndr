@@ -6,8 +6,9 @@
         {
             "type": "trial-location",
             "sytle": "kids-game.css",
-            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, indulhat az első feladat.",
-            "solution": "geo koordinata....",
+            "solution": "47.68295803215371,16.572903480112643",
+            "tolerance": 20,
+            "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, menjetek a zenepavilonhoz, és már kezdődhet is az első kihívás.",
             "next-button-text": "Itt vagyok",
             "max-trial-retries": -1
         },
