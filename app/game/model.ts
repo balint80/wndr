@@ -3,6 +3,10 @@ import { IScene, Scene } from '../scene/model';
 import { GetSceneClass } from '../scene/scene-factory';
 import { Logger, Severity } from '../utils/logger';
 
+import * as geolocation from '@nativescript/geolocation';
+import { CoreTypes } from '@nativescript/core' // used to describe at what accuracy the location should get
+
+
 
 export class Game extends Observable {
     title: string;
@@ -13,6 +17,15 @@ export class Game extends Observable {
         super();
         this.title = gameConfig['title'];
         Logger.Log(Severity.Info, `Initializing "${this.title}"`);
+
+        geolocation.enableLocationRequest().then(() => {
+    
+            geolocation.getCurrentLocation({ desiredAccuracy: CoreTypes.Accuracy.high, maximumAge: 5000, timeout: 20000 }).then((currentLocation) => {
+        
+              console.log("My current latitude: ", currentLocation.latitude)
+              console.log("My current longitude: ", currentLocation.longitude)
+            })
+          })
 
         // scenes
         this.scenes = [];

@@ -4,13 +4,10 @@
 
     "scenes": [
         {
-            "type": "trial-camera",
-            "content-html": "hghghgh"
-        },
-        {
             "type": "trial-location",
             "sytle": "kids-game.css",
             "content-html": "Ez a játék a Soproni Erzsébet Kertben játszható. Ha odaértetek, indulhat az első feladat.",
+            "solution": "geo koordinata....",
             "next-button-text": "Itt vagyok",
             "max-trial-retries": -1
         },
